@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid painter</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <main>
+        <section id="control">
+            <div id="size" class="control-div">
+                <span>
+                    <label for="heigth">heigth:</label>
+                    <input type="range" min="10" max="100" value="50" id="heigth">
+                    <span id="heigthValue" class="value"></span>
+                </span>
+                <span>
+                    <label for="width">width:</label>
+                    <input type="range" min="10" max="100" value="50" id="width">
+                    <span id="widthValue" class="value"></span>
+                </span>
+               
+            </div>
+            <div id="buttons" class="control-div">
+                <button class="round-button" id="generate">generate</button>
+                <span>
+                    <label for="color">color:</label>
+                    <input type="color" id="color">
+                </span>
+                <button class="round-button" id="erase">erase</button>
+                <button class="round-button" id="clear">clear</button>
+            </div>
+            
+        </section>
+        <section id="grid"></section>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(255, 200, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+main{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.control-div{
+    display: flex;
+    padding: 5px;
+}
+
+.control-div>*{
+    margin: 5px;
+}
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+#size{
+    justify-content: space-around;
+}
+#color{
+    padding: 0;
+    border: 0;
+}
+.round-button{
+    background-color: rgb(255, 200, 0);
+    border-radius: 5px;
+    border: 0;
+}
+
+.cell{
+    height: 15px;
+    width: 15px;
+    border: 1px black solid;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: start;
+}
