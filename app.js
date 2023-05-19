@@ -1,5 +1,5 @@
 let color="#000000",
-ispressed=false;
+ispressed='';
 
 
 function init(){
@@ -11,8 +11,10 @@ function init(){
     document.getElementById('color').addEventListener('change',
     e=>color=e.target.value
     );
-    document.addEventListener('mousedown',()=>ispressed=true);
-    document.addEventListener('mouseup',()=>ispressed=false);
+    document.addEventListener('mousedown',(e)=>{
+        
+    });
+    document.addEventListener('mouseup',()=>ispressed='');
     document.getElementById("erase").addEventListener('click',erase);
     document.getElementById("clear").addEventListener('click',clear)
 }
@@ -36,12 +38,19 @@ function generate(){
     document.querySelectorAll('.cell').forEach(cell=>cell.addEventListener('mousedown',paint))
 }
 function sprayPaint(e){
-    if(ispressed){
+    if(ispressed===0){
         e.target.style.background=color;
+    }else if(ispressed===2){
+        e.target.style.background="#ffffff";
     }
 }
 function paint(e){
-    e.target.style.background=color;
+    ispressed=e.button;
+    if(ispressed===0){
+        e.target.style.background=color;
+    }else if(ispressed===2){
+        e.target.style.background="#ffffff";
+    }
 }
 function setHight(){
     const height=document.getElementById("heigth").value;
